@@ -1,0 +1,38 @@
+.Mui-error {
+    color: red !important;
+  }
+  
+  .Mui-error.MuiInputBase-input {
+    border-color: red !important;
+    border-width: 1px !important;
+    border-style: solid !important;
+  }
+
+.MuiOutlinedInput-root {
+    width: 600px;
+    border-radius: 5px;
+  }
+  
+  .MuiOutlinedInput-root .MuiOutlinedInput-notchedOutline {
+    border-color: white  ;
+  }
+  
+  .MuiOutlinedInput-root:hover .MuiOutlinedInput-notchedOutline {
+    border-color: white !important;
+    border: 2px solid #fff  !important;
+  }
+  
+  .MuiOutlinedInput-root.Mui-focused .MuiOutlinedInput-notchedOutline {
+    border-color: #0951d8ee  !important;
+  }
+  
+  .MuiFormLabel-root.Mui-focused {
+    color: #0951d8ee  !important;
+  }
+  
+  .MuiInputBase-input {
+    color: white  !important;
+  }
+  .MuiFormLabel-root{
+    color: white !important;
+  }

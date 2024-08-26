@@ -1,0 +1,74 @@
+*{
+    fontFamily:'Edu VIC WA NT Beginner'
+}
+body {
+  position: relative;
+}
+  
+#div{
+  position: absolute;
+  left: 0;
+  display: flex;
+  top: 10%;
+  padding: 20px;
+  margin-top: 10px;
+  width: 60%;
+  height: 200px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  background-color: #0951d8ee;
+  border-radius: 50% 10% 50% 0% / 10% 80% 20% 50% !important;
+}
+
+#welcome{
+    position: absolute;
+    font-family:'Edu VIC WA NT Beginner';
+    font-weight: 900;
+    left: 17%;
+
+}
+.MuiContainer-root {
+    display: flex;
+    justify-content: center;
+}
+
+#media {
+    height: 200px;
+    width: 300px;
+    transition: all 1s;
+
+  }
+  
+  #card {
+    transition: all 1s;
+  }
+  
+  #card:hover{
+    transform: scale(1.1);
+    transition: all 1s;
+    box-shadow: 3px 2px 4px #fff;
+  }
+  
+  #card:hover #media{
+    transform: scale(1.1) ;
+    transition: all 1s;
+  }
+#card:hover #arrow{
+  animation: spin 1.5s infinite linear forwards;
+}
+@keyframes spin {
+    0%{
+        transform: translateX(0px);
+        filter: drop-shadow(2px 3px 4px #000);
+    }
+    50%{
+        transform: translateX(-20px);
+        filter: drop-shadow(3px 6px 6px #000);
+    }
+    100%{
+        transform: translateX(0px);
+        filter: drop-shadow(2px 3px 4px #000);
+    }
+}
+  
