@@ -1,0 +1,27 @@
+{
+  "files": {
+    "main.css": "/libraryProject/static/css/main.e9c505ba.css",
+    "main.js": "/libraryProject/static/js/main.dd56e578.js",
+    "static/media/library.jpg": "/libraryProject/static/media/library.3e714cb0d17ae868f728.jpg",
+    "static/media/email.jpg": "/libraryProject/static/media/email.f31da90e9e185d82e6a4.jpg",
+    "static/media/history.jpg": "/libraryProject/static/media/history.663e2a10151c9e75048d.jpg",
+    "static/media/picture.jpg": "/libraryProject/static/media/picture.caa965b971c73076cc7b.jpg",
+    "static/media/1984.jpg": "/libraryProject/static/media/1984.920ddd86d1a86597d673.jpg",
+    "static/media/hunger.jpg": "/libraryProject/static/media/hunger.c3bb66e1018b7080ca25.jpg",
+    "static/media/kill.jpg": "/libraryProject/static/media/kill.a3d9dec684bcd4977555.jpg",
+    "static/media/pride.jpg": "/libraryProject/static/media/pride.b5b465a89c9b5d7c270b.jpg",
+    "static/media/russian.jpg": "/libraryProject/static/media/russian.29b9e869ce300006f680.jpg",
+    "static/media/catcher.jpg": "/libraryProject/static/media/catcher.bf5a51fb27b26d7f4074.jpg",
+    "static/media/scarlet.jpg": "/libraryProject/static/media/scarlet.40045c07751f0c227e22.jpg",
+    "static/media/lord.jpg": "/libraryProject/static/media/lord.77929de5f2f94211f7e6.jpg",
+    "static/media/empty.png": "/libraryProject/static/media/empty.5fbd07fe654b2cb12379.png",
+    "static/media/nade.jpg": "/libraryProject/static/media/nade.ac138deac00af7c04c1a.jpg",
+    "index.html": "/libraryProject/index.html",
+    "main.e9c505ba.css.map": "/libraryProject/static/css/main.e9c505ba.css.map",
+    "main.dd56e578.js.map": "/libraryProject/static/js/main.dd56e578.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.e9c505ba.css",
+    "static/js/main.dd56e578.js"
+  ]
+}
