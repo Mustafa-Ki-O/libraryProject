@@ -9,6 +9,9 @@
     font-size: 20px; 
   }
 
+  #historyCard{
+    display: none;
+  }
   @media screen and (max-width: 780px) {
     #historyTable{
       display: none;

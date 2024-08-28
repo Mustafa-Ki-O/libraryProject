@@ -1,3 +1,7 @@
+#messageCard{
+    display: none;
+}
+
 @media screen and (max-width: 780px) {
     #messageTable{
       display: none;

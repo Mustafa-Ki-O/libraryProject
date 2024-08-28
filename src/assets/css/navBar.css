@@ -11,6 +11,7 @@
   justify-content: space-between;
   align-items: center;
   position: relative;
+  padding:3px 8px;
 }
 
 
@@ -24,7 +25,7 @@
   right: -6px;
   z-index: 5;
   gap: 10px;
-  top:90%;
+  top: 45px;;
   background-color: #084b4bc4;
   width: 100%;
 }
