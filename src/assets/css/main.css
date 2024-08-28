@@ -52,11 +52,11 @@ body {
 
   }
   
-  #card {
+  #cardMain {
     transition: all 1s;
   }
   
-  #card:hover{
+  #cardMain:hover{
     transform: scale(1.1);
     transition: all 1s;
     box-shadow: 3px 2px 4px #fff;

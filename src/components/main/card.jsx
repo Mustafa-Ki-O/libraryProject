@@ -5,7 +5,7 @@ import '../../assets/css/main.css'
 const MainCard = ({buttonName,action,image,description,icon}) =>  {
     return (
       <Container sx={{display:'flex',flexDirection:'column',alignItems:'center'}}>
-        <Card id='card'  sx={{width:300, height: 380, display: 'flex', flexDirection: 'column', justifyContent: 'space-between', overflow: 'hidden'}}>
+        <Card id='cardMain' sx={{width:300, height: 380, display: 'flex', flexDirection: 'column', justifyContent: 'space-between', overflow: 'hidden'}}>
         <img
           id='media'
           src={image}

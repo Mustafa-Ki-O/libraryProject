@@ -25,10 +25,11 @@
   right: -6px;
   z-index: 5;
   gap: 10px;
-  top: 45px;;
+  top: 43px;;
   background-color: #084b4bc4;
   width: 100%;
 }
+ 
 .ulClicked li{
   flex-grow: 1;
   border-bottom: 1px solid #ffffffb2;
