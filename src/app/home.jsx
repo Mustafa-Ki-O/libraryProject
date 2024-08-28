@@ -19,8 +19,8 @@ const Home=() => {
         flexDirection: 'column',
         padding: 4,rowGap:15,marginTop:5}}>
   <div id="div">
-  <Typography id="welcome"  variant="h3" component="h1" >
-    Welcome to Our Website...<WavingHandIcon sx={{fontSize:40}}/>
+  <Typography id="welcome"  variant="h3" component="h1"sx={{color:'#fff'}} >
+    Welcome to Our Website...<WavingHandIcon sx={{fontSize:40,color:'#fff'}}/>
   </Typography>
   </div>
   <Container sx={{
