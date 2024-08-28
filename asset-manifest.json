@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/libraryProject/static/css/main.8fe4a1e9.css",
-    "main.js": "/libraryProject/static/js/main.8eefa55a.js",
+    "main.css": "/libraryProject/static/css/main.4274cac3.css",
+    "main.js": "/libraryProject/static/js/main.848d9b20.js",
     "static/media/library.jpg": "/libraryProject/static/media/library.3e714cb0d17ae868f728.jpg",
     "static/media/email.jpg": "/libraryProject/static/media/email.f31da90e9e185d82e6a4.jpg",
     "static/media/history.jpg": "/libraryProject/static/media/history.663e2a10151c9e75048d.jpg",
@@ -17,11 +17,11 @@
     "static/media/empty.png": "/libraryProject/static/media/empty.5fbd07fe654b2cb12379.png",
     "static/media/nade.jpg": "/libraryProject/static/media/nade.ac138deac00af7c04c1a.jpg",
     "index.html": "/libraryProject/index.html",
-    "main.8fe4a1e9.css.map": "/libraryProject/static/css/main.8fe4a1e9.css.map",
-    "main.8eefa55a.js.map": "/libraryProject/static/js/main.8eefa55a.js.map"
+    "main.4274cac3.css.map": "/libraryProject/static/css/main.4274cac3.css.map",
+    "main.848d9b20.js.map": "/libraryProject/static/js/main.848d9b20.js.map"
   },
   "entrypoints": [
-    "static/css/main.8fe4a1e9.css",
-    "static/js/main.8eefa55a.js"
+    "static/css/main.4274cac3.css",
+    "static/js/main.848d9b20.js"
   ]
 }
