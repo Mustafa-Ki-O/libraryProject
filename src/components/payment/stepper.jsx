@@ -108,7 +108,7 @@ export default function PaymentStepper() {
    
     <Container sx={{position:'relative',display:'flex',justifyContent:'center',alignItems:'center',flexWrap:'wrap'}}  >
     {showProgress && <Progress />}
-      <Stepper activeStep={activeStep} sx={{ width: '95%' ,position:'fixed',top:'14%' }}>
+      <Stepper activeStep={activeStep} sx={{ width:{sm:'95%',xs:'auto'},position:'fixed',top:'14%' }}>
         {steps.map((label) => {
           return (
             <Step key={label}>
@@ -119,7 +119,7 @@ export default function PaymentStepper() {
           );
         })}
       </Stepper>
-      <Box sx={{ mb: 4,mt:10 }}>
+      <Box sx={{ mb: 4,mt:10,width:'100%' }}>
         {activeStep === 0 && (
           <Grid container spacing={3}>
             <Grid item xs={12}>
@@ -128,11 +128,12 @@ export default function PaymentStepper() {
                 name="name"
                 value={personalInfo.name}
                 onChange={handlePersonalInfoChange}
-                style={{width:600,borderRadius:5}}
                 error={errorsPersonal.name ? true : false}
                 helperText={errorsPersonal.name}
+                fullWidth
               />
             </Grid>
+            
             <Grid item xs={12}>
               <TextField
                 label="Email"
@@ -141,6 +142,7 @@ export default function PaymentStepper() {
                 onChange={handlePersonalInfoChange}
                 error={errorsPersonal.email ? true : false}
                 helperText={errorsPersonal.email}
+                fullWidth
               />
             </Grid>
             <Grid item xs={12}>
@@ -151,6 +153,7 @@ export default function PaymentStepper() {
                 onChange={handlePersonalInfoChange}
                 error={errorsPersonal.phone ? true : false}
                 helperText={errorsPersonal.phone}
+                fullWidth
               />
             </Grid>
             <Grid item xs={12}>
@@ -159,9 +162,9 @@ export default function PaymentStepper() {
                 name="address"
                 value={personalInfo.address}
                 onChange={handlePersonalInfoChange}
-                style={{width:600 ,borderRadius:5}}
                 error={errorsPersonal.address ? true : false}
                 helperText={errorsPersonal.address}
+                fullWidth
               />
             </Grid>
           </Grid>
@@ -174,9 +177,9 @@ export default function PaymentStepper() {
                 name="cardNumber"
                 value={cardInfo.cardNumber}
                 onChange={handleCardInfoChange}
-                style={{width:600}}
                 error={errorsCard.cardNumber ? true : false}
                 helperText={errorsCard.cardNumber}
+                fullWidth
               />
             </Grid>
             <Grid item xs={12}>
@@ -185,9 +188,9 @@ export default function PaymentStepper() {
                 name="cvv"
                 value={cardInfo.cvv}
                 onChange={handleCardInfoChange}
-                style={{width:600}}
                 error={errorsCard.cvv ? true : false}
                 helperText={errorsCard.cvv}
+                fullWidth
               />
             </Grid>
           </Grid>
@@ -196,17 +199,23 @@ export default function PaymentStepper() {
           <Grid container spacing={2}>
             <Grid item xs={12}>
             <Typography id="transition-modal-title" variant="p" component="div">
-              You have {count} books in your package
-            </Typography>
+              You have <span style={{fontSize:'25px',textShadow:'3px 2px 2px #000' }}>{count}</span>  books in your package
+            </Typography> 
             </Grid>
             <Grid item xs={12}>
             <Typography variant="h6" component="div"> 
                 I have accepted to all the condaitions and forms 
-             <Checkbox label="Continue" onChange={(e) => setIsChecked(e.target.checked)}/>
+             <Checkbox label="Continue" onChange={(e) => setIsChecked(e.target.checked)}
+              sx={{
+                color: 'white',
+                '&.Mui-checked': {
+                  color: 'white',
+                },
+              }}/>
             </Typography>
             </Grid>
           </Grid>
-        )}
+        )} 
       </Box>
       <Box sx={{ display: 'flex', flexDirection: 'row', pt: 2,flexGrow:1, width: '90%' ,position:'fixed',bottom:'14%' }}>
         <Button

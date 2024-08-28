@@ -4,3 +4,56 @@
 .link:hover{
     filter: drop-shadow(1px 1px 1px #000);
 }
+
+
+#toolbar{
+  display:flex ;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+}
+
+
+.ulClicked {
+  list-style-type: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  right: -6px;
+  z-index: 5;
+  gap: 10px;
+  top:90%;
+  background-color: #084b4bc4;
+  width: 100%;
+}
+.ulClicked li{
+  flex-grow: 1;
+  border-bottom: 1px solid #ffffffb2;
+  padding: 8px;
+}
+
+.ul{
+  list-style-type: none;
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+
+@media (max-width:768px){
+  .ul{
+    display: none;
+  }
+  .link{
+    width: 90%;
+  }
+}
+/* Show the list on mobile devices */
+
+
+  
+  
+  
+
+

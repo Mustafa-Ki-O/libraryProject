@@ -1,7 +1,7 @@
-import { Table, TableHead, TableBody, TableRow, TableCell } from '@mui/material';
+import { Table, TableHead, TableBody, TableRow, TableCell,Card,CardActionArea,CardContent,Typography } from '@mui/material';
 import { useState } from 'react';
 import { useEffect } from 'react';
-
+import '../../assets/css/message.css'
 const Message =() => {
     const [message, setMessage] = useState({});
 
@@ -17,7 +17,7 @@ const Message =() => {
     return(
         <>
         {isValid ? (
-            <Table sx={{ justifyContent:'center',opacity:0.7,mt:5 }} aria-label="simple table">
+            <Table id='messageTable' sx={{ justifyContent:'center',opacity:0.7,mt:5 }} aria-label="simple table">
             <TableHead>
               <TableRow>
                 <TableCell sx={{fontFamily:'Edu VIC WA NT Beginner', fontSize: 18}}>Name</TableCell>
@@ -33,7 +33,26 @@ const Message =() => {
                 </TableRow>
             </TableBody>
           </Table>
+
+          
         ):(<p>No Messages</p>)}
+          {isValid ? (
+          <Card id='messageCard' sx={{ height:280, borderRadius: 0,width:'100%',opacity:0.6}}>
+            <CardActionArea sx={{  height: '100%' }}>
+              <CardContent sx={{ display: 'flex', flexDirection: 'column', gap: '4px',justifyContent:'center',alignItems:'center' }}>
+                <Typography gutterBottom variant="h5" component="div" color="primary" sx={{ fontFamily: 'Edu VIC WA NT Beginner', fontWeight: 700 }}>
+                Name: {message.firstName && message.firstName.charAt(0).toUpperCase() + message.firstName.slice(1)} {message.lastName && message.lastName.charAt(0).toUpperCase() + message.lastName.slice(1)}
+                </Typography>
+                <Typography variant="h6" color="primary" sx={{ fontFamily: 'Edu VIC WA NT Beginner' }}>
+                 Email : {message.email}
+                </Typography>
+                <Typography variant="h6" color="text.primary" sx={{ fontFamily: 'Edu VIC WA NT Beginner' }}>
+                 Description : {message.description}
+                </Typography>
+              </CardContent>
+            </CardActionArea>
+          </Card>):(<p>No Messages</p>)
+          }
         </>
     )
 }

@@ -40,10 +40,10 @@ const handleChange = (_, newValue) => {
           fontFamily: 'Edu VIC WA NT Beginner',
           fontSize: 18,
           '& .MuiSlider-track': {
-            backgroundColor: 'white',
+            backgroundColor:{sm:'white',xs:'blue'} ,
           },
           '& .MuiSlider-thumb': {
-            color: 'white',
+            color: {sm:'white',xs:'blue'},
             '&:hover': {
               boxShadow: '0px 0px 0px 8px rgba(255, 255, 255, 0.5)',
             },

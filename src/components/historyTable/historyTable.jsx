@@ -1,6 +1,7 @@
-import { Container, Table, TableBody, TableCell, TableRow, TableHead } from "@mui/material";
+import { Container, Table, TableBody, TableCell, TableRow, TableHead ,Card,CardActionArea,CardContent,Typography} from "@mui/material";
 import { useState, useEffect } from "react";
 import '../../assets/css/historyTable.css';
+import Empty from "../../helper/emptyPage";
 
 const HistoryTable = () => {
   const [localStorageItems, setLocalStorageItems] = useState([]);
@@ -13,8 +14,8 @@ const HistoryTable = () => {
   }, []);
 
   return (
-    <Container sx={{ display: 'flex', justifyContent: 'center', alignItems: 'center', marginTop: 15, marginBottom: 10 }}>
-      <Table>
+    <Container sx={{ display: 'flex', justifyContent: 'center',flexDirection:'column', alignItems: 'center',gap:3, marginTop: 15, marginBottom: 10 }}>
+      <Table id='historyTable'>
         <TableHead>
           <TableRow>
             <TableCell sx={{ fontFamily: 'Edu VIC WA NT Beginner', fontWeight: 'bold', fontSize: 20 }}>Borrower Name</TableCell>
@@ -44,8 +45,33 @@ const HistoryTable = () => {
           )}
         </TableBody>
       </Table>
+      {localStorageItems && localStorageItems.length > 0 ? (
+        localStorageItems.filter((item) => item.borrowerName && item.borrowerAddress).map((item, index) => (
+      <Card id='historyCard' sx={{ height:280, borderRadius: 0,width:'100%'}}>
+    <CardActionArea sx={{  height: '100%' }}>
+    <CardContent sx={{ display: 'flex', flexDirection: 'column', gap: '4px',justifyContent:'center',alignItems:'center' }}>
+      <Typography gutterBottom variant="h5" component="div" color="primary" sx={{ fontFamily: 'Edu VIC WA NT Beginner', fontWeight: 700 }}>
+       Borrower-Name : {item.borrowerName}
+      </Typography>
+      <Typography variant="h6" color="text.primary" sx={{ fontFamily: 'Edu VIC WA NT Beginner' }}>
+       Borrower-Address : {item.borrowerAddress}
+      </Typography>
+      <Typography variant="h6" color="blue" sx={{ fontFamily: 'Edu VIC WA NT Beginner' }}>
+       Book-Tilte : {item.title}
+      </Typography>
+      <Typography variant="body3" color="text.secondary" sx={{ fontFamily: 'Edu VIC WA NT Beginner' }}>
+       Date Of Purshase : {item.dateOfPurshase}
+      </Typography>
+      <Typography variant="body3" color="text.secondary" sx={{ fontFamily: 'Edu VIC WA NT Beginner' }}>
+       Date Of Restore : {item.restoreDate}
+      </Typography>
+    </CardContent>
+  </CardActionArea>
+</Card>
+        ))):(<Empty/>)}
+   
     </Container>
-  );
+  )
 };
 
 export default HistoryTable;

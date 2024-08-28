@@ -5,10 +5,16 @@ import Toolbar from '@mui/material/Toolbar';
 import { Link, useLocation } from 'react-router-dom';
 import bookIcon from '../../assets/book.png'
 import { Container } from '@mui/material';
+import MenuIcon from '@mui/icons-material/Menu';
+import { useState } from 'react';
 
 export default function NavBar() {
-  const location = useLocation();
-
+  const location = useLocation(); 
+  const [clicked,setClicked]=useState(false);
+  const handleClick= ()=>{
+    setClicked(!clicked);
+    console.log(clicked); 
+  }
   return (
     <Box sx={{
         position: 'fixed',
@@ -18,14 +24,15 @@ export default function NavBar() {
         width:'100%',
       }}>
         
-        <AppBar position="static" sx={{display:'flex', width: '100%',flexGrow:1 }}>
-        <Container>
-          <Toolbar sx={{ justifyContent: 'space-between',alignItems:'center' }}>
-            <Link  to="/" style={{ textDecoration: 'none', color: 'inherit' }}>
+        <AppBar position="static" sx={{display:'flex', width: '100%', }}>
+        <Container sx={{padding:{xs:0}}}>
+          <Toolbar id='toolbar' sx={{padding:{xs:0}}}>
+            <Link  to="/" style={{ textDecoration: 'none', color: 'inherit' ,display:'flex'}}>
               <img src={bookIcon} width='40px' />
-              </Link>
-            <Box sx={{ display: 'flex', gap: 2 }}>
-               <ul style={{listStyleType:'none',display:'flex',gap:25,marginRight:20}}>
+            </Link>
+            <Box sx={{ display:{sm:'flex'}, gap: 2 }}>
+            <MenuIcon id='menuIcon' sx={{ display: { sm: 'none' }, zIndex: 3 }} onClick={handleClick} />
+            <ul className={clicked ? 'ulClicked' : 'ul'} >
                <Link className={location.pathname === '/' ? 'link active' : 'link'} to="/" style={{ textDecoration: 'none', color: 'inherit',fontWeight:'bold' }}>
                 <li >Home</li>
               </Link>

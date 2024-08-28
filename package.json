@@ -1,7 +1,15 @@
 {
   "name": "library-app",
   "version": "0.1.0",
-  "homepage": "https://Mustafa-Ki-O/libraryProject",
+  "homepage": "https://Mustafa-Ki-O.github.io/libraryProject",
+  "gh-pages": {
+    "rewrites": [
+      {
+        "from": "**/*",
+        "to": "/"
+      }
+    ]
+  },
   "private": true,
   "dependencies": {
     "@emotion/react": "^11.13.3",

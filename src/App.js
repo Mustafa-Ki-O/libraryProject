@@ -18,7 +18,7 @@ function App() {
     };
   }, []);
 
-  return showStartPage ? <Start /> : <RouterProvider router={router} />;
+  return showStartPage ? <Start /> : <RouterProvider basename={process.env.PUBLIC_URL} router={router} />;
 }
 
 export default App;

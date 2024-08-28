@@ -37,9 +37,9 @@ const BookCard=( {image, title, description, author,id ,salary} )=>{
   };
 
   return (
-    <Container id='con1' sx={{display:'flex', alignItems:'center',width:600, justifyContent:'center'}}>
+    <Container id='con1' sx={{display:'flex', alignItems:'center',width:{xs:350,sm:600}, justifyContent:'center'}}>
     <img src={image} height='350' width='200' style={{borderRadius:8,zIndex:2}}></img>
-    <Card sx={{   height: 270, borderRadius: 0 }}>
+    <Card sx={{ height:{xs:150 ,sm:270} , borderRadius: 0 }}>
     <CardActionArea sx={{ display: 'flex', flexDirection: 'column', gap: '4px', height: '100%' }}>
     <CardContent sx={{ flex: 1 }}>
       <Typography gutterBottom variant="h5" component="div" color="primary" sx={{ fontFamily: 'Edu VIC WA NT Beginner', fontWeight: 700 }}>

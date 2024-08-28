@@ -1,10 +1,9 @@
+import '../assets/css/start.css'
 const Start = () => {
 
     return (
       <iframe
         id="myIframe"
-        width='1100px'
-        height='500px'
         frameBorder='0'
         color="#32e7e78f"
         scrolling="no"

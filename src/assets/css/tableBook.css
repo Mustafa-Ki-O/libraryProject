@@ -1,0 +1,11 @@
+
+@media screen and (max-width: 780px) {
+  #table{
+    display: none;
+  }
+  #card{
+    display: flex;
+    border: 2px solid #0e77a0;
+    border-radius: 15px;
+  }
+}

@@ -12,6 +12,15 @@
 #con1:hover img{
 animation: card 1s forwards linear;
 }
+
+@media screen and (max-width: 480px) {
+  #con1 img{
+      width:130px;
+      height: 230px;
+  }
+}
+
+
 @keyframes card {
     0% {
       transform: translateX(0px) ;

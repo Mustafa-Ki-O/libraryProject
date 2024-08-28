@@ -1,4 +1,4 @@
-import { Table, TableHead, TableBody, TableRow, TableCell,  Button } from '@mui/material';
+import { Table, TableHead, TableBody, TableRow, TableCell,  Button, Card,CardActionArea,CardContent,Typography } from '@mui/material';
 import { useSelector} from "react-redux";
 import '../../assets/css/tableBook.css'
 import DeleteIcon from '@mui/icons-material/Delete';
@@ -18,7 +18,7 @@ const TableBook=()=>{
 
     return( 
       <> 
-          <Table sx={{ justifyContent:'center' }} aria-label="simple table">
+          <Table id='table' aria-label="simple table" >
             <TableHead>
               <TableRow>
                 <TableCell sx={{fontFamily:'Edu VIC WA NT Beginner', fontSize: 18}} >Title</TableCell>
@@ -48,6 +48,35 @@ const TableBook=()=>{
               ))}
             </TableBody>
           </Table>
+         {/* for mobiles screens */}
+         {books && books.map((book) => (
+         <Card id='card' sx={{ height:280, borderRadius: 0}}>
+    <CardActionArea sx={{  height: '100%' }}>
+    <CardContent sx={{ display: 'flex', flexDirection: 'column', gap: '4px',justifyContent:'center',alignItems:'center' }}>
+      <Typography gutterBottom variant="h5" component="div" color="primary" sx={{ fontFamily: 'Edu VIC WA NT Beginner', fontWeight: 700 }}>
+       Book-Tiltle : {book.title}
+      </Typography>
+      <Typography variant="h6" color="text.primary" sx={{ fontFamily: 'Edu VIC WA NT Beginner' }}>
+       Book-Author : {book.author}
+      </Typography>
+      <Typography variant="body3" color="text.secondary" sx={{ fontFamily: 'Edu VIC WA NT Beginner' }}>
+       Date Of Purshase : {book.dateOfPurshase}
+      </Typography>
+      <Typography variant="body3" color="text.secondary" sx={{ fontFamily: 'Edu VIC WA NT Beginner' }}>
+       Date Of Restore : {book.restoreDate}
+      </Typography>
+      <Typography>
+        <BorrowingDuration id={book.id}/>
+      </Typography>
+      <Typography sx={{alignSelf:'end' }}>
+        <Button sx={{display:'flex',color:'#f51225f5'}} onClick={()=>handleShowModal(book.id)}>
+              <DeleteIcon />
+        </Button>
+      </Typography>
+    </CardContent>
+  </CardActionArea>
+</Card>
+))}
         <DeleteModal
         open={open}
         setOpen={setOpen}

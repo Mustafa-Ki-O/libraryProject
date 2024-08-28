@@ -23,7 +23,14 @@ const Home=() => {
     Welcome to Our Website...<WavingHandIcon sx={{fontSize:40}}/>
   </Typography>
   </div>
-  <Container sx={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: 4,marginBottom:10,marginTop:'30%' }}>
+  <Container sx={{
+  display: { xs: 'flex', sm: 'grid' },
+  flexDirection: { xs: 'column', sm: 'row' },
+  gridTemplateColumns: { sm: 'repeat(3, 1fr)' },
+  gap: 4,
+  marginBottom: 10,
+  marginTop: {xs:'90%',sm:'30%'}
+}}>
     <MainCard
       buttonName="Library"
       description="a big variety of books you can find here"

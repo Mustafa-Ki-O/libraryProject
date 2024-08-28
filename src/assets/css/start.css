@@ -1,0 +1,10 @@
+#myIframe{
+    width: 500px;
+    height: 500px;
+}
+@media (max-width:780px){
+    #myIframe{
+        width: 250px;
+        height: 250px;
+    }
+}

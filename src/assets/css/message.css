@@ -1,26 +1,15 @@
-.table-cell {
-    font-family: 'Edu VIC WA NT Beginner';
-    font-size: 18px; 
-  }
-  
-  .table-header-cell {
-    font-family: 'Edu VIC WA NT Beginner';
-    font-weight: bold;
-    font-size: 20px; 
-  }
-
-  @media screen and (max-width: 780px) {
-    #historyTable{
+@media screen and (max-width: 780px) {
+    #messageTable{
       display: none;
     }
-    #historyCard{
+    #messageCard{
       display: flex;
       border: 2px solid #0e77a0;
       border-radius: 15px;
       transition: transform 1s;
     }
   }
-  #historyCard:hover{
+  #messageCard:hover{
      border-width: 3px;
      animation: animateBorder 2s infinite forwards linear;
      transform: scale(1.04);

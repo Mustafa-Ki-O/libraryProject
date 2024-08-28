@@ -8,10 +8,9 @@
     border-style: solid !important;
   }
 
-.MuiOutlinedInput-root {
-    width: 600px;
-    border-radius: 5px;
-  }
+.MuiFormControl-root{
+  width: 100%;
+}
   
   .MuiOutlinedInput-root .MuiOutlinedInput-notchedOutline {
     border-color: white  ;

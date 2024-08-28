@@ -35,12 +35,13 @@ const ShoppingCart=()=>{
         onClick={handleShowModal} 
         endIcon={<PersonAddIcon/>} 
         sx={{
-          position: 'fixed', 
-          bottom: '60px', 
-          left: '50%', 
-          transform: 'translateX(-50%)', 
-          width: '20%',
-          fontFamily:'Edu VIC WA NT Beginner'
+          position:{xs:'static' ,sm:  'fixed'}, 
+          bottom: {sm:'60px'}, 
+          left: {sm:'50%'}, 
+          transform: {sm:'translateX(-50%)'}, 
+          width: {sm:'20%',xs:'40%'},
+          fontFamily:'Edu VIC WA NT Beginner',
+          alignSelf:{xs:'center'}
         }}
         disabled={!allBooksHaveRestoreDate}
         > Continue  </Button>
